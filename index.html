@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>叮当 · AIGC体验设计师</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 首页 Hero ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>你好，我是<br>叮当</h1>
+      <h2>AIGC 体验设计师</h2>
+      <p>建筑学硕士出身，专注 AIGC 设计落地。</p>
+      <p>用 AI 工具链赋能体验设计，让创意高效变为现实。</p>
+      <div class="tags">
+        <span class="tag">数字人设计</span>
+        <span class="tag">AI 视频生成</span>
+        <span class="tag">视觉设计</span>
+        <span class="tag">游戏美术</span>
+        <span class="tag">品牌海报</span>
+      </div>
+      <a href="#work" class="btn-primary">查看作品 ↓</a>
+    </div>
+  </section>
+
+  <!-- ===== 导航 ===== -->
+  <header id="navbar">
+    <h1 class="nav-logo">叮当</h1>
+    <nav>
+      <ul>
+        <li><a href="#work">作品</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView()">联系我</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== 精选作品 ===== -->
+  <section id="work" class="work-section">
+    <div class="work-header">
+      <h2>精选作品</h2>
+      <p>6 个项目 · 覆盖数字人、游戏、品牌、科普视频、插画、AI Skill</p>
+    </div>
+    <div class="work-grid">
+
+      <!-- 项目1 -->
+      <div class="product-card" onclick="openProject(0)">
+        <div class="product-image">
+          <img src="images/出行数字人定稿.png" alt="出行数字人">
+        </div>
+        <div class="product-info">
+          <p class="category">数字人 · AIGC</p>
+          <h3>出行数字人</h3>
+          <p>支付宝出行场景 AI 出行助手的数字人形象设计</p>
+          <p><a class="view-link">查看详情 →</a></p>
+          <div class="tools">
+            <button>Midjourney</button>
+            <button>即梦</button>
+            <button>ComfyUI</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目2 -->
+      <div class="product-card" onclick="openProject(1)">
+        <div class="product-image">
+          <img src="images/书阁一体封面.png" alt="书阁一体">
+        </div>
+        <div class="product-info">
+          <p class="category">游戏美术 · AIGC</p>
+          <h3>书阁一体</h3>
+          <p>支付宝文化/科普小游戏角色/场景/关卡引导视频设计</p>
+          <p><a class="view-link">查看详情 →</a></p>
+          <div class="tools">
+            <button>即梦</button>
+            <button>PS</button>
+            <button>AE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目3 -->
+      <div class="product-card" onclick="openProject(2)">
+        <div class="product-image">
+          <img src="images/余额宝-tasaki.png" alt="余额宝联名">
+        </div>
+        <div class="product-info">
+          <p class="category">品牌海报 · AIGC</p>
+          <h3>余额宝 × 品牌联名</h3>
+          <p>Maison Margiela、TUMI、TASAKI、RIMOWA 联名推广海报</p>
+          <p><a class="view-link">查看详情 →</a></p>
+          <div class="tools">
+            <button>ComfyUI</button>
+            <button>PS</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目4 -->
+      <div class="product-card" onclick="openProject(3)">
+        <div class="product-image">
+          <img src="images/友谊医院_一开会就想上厕所.png" alt="友谊医院科普视频">
+        </div>
+        <div class="product-info">
+          <p class="category">AI 视频 · AIGC</p>
+          <h3>友谊医院科普视频</h3>
+          <p>医学科普与健康宣教 AIGC 视频生成，已上线阿福 App</p>
+          <p><a class="view-link">查看详情 →</a></p>
+          <div class="tools">
+            <button>可灵</button>
+            <button>Runway</button>
+            <button>Sora</button>
+            <button>D-ID</button>
+            <button>ComfyUI</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目5 -->
+      <div class="product-card" onclick="openProject(4)">
+        <div class="product-image">
+          <img src="images/小满节气.png" alt="节气插画">
+        </div>
+        <div class="product-info">
+          <p class="category">插画 · AIGC</p>
+          <h3>节气插画</h3>
+          <p>以二十四节气为主题，融合传统文化元素与现代插画风格</p>
+          <p><a class="view-link">查看详情 →</a></p>
+          <div class="tools">
+            <button>Midjourney</button>
+            <button>Stable Diffusion</button>
+            <button>Photoshop</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 项目6 -->
+      <div class="product-card" onclick="openProject(5)">
+        <div class="product-image">
+          <img src="images/小满节气.png" alt="建筑方案展示视频生成器">
+        </div>
+        <div class="product-info">
+          <p class="category">AI Skill · 建筑可视化</p>
+          <h3>建筑方案展示视频生成器</h3>
+          <p>直连 ComfyUI，链式一致性生成，自动保持建筑形象统一</p>
+          <p><a class="view-link">查看详情 →</a></p>
+          <div class="tools">
+            <button>ComfyUI</button>
+            <button>Stable Diffusion</button>
+            <button>Python</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 技能 ===== -->
+  <section id="skills" class="skills-section">
+    <h2>技能</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>AIGC 工具</h3>
+        <div class="skill-tags">
+          <span>Midjourney</span><span>Stable Diffusion</span><span>ComfyUI</span>
+          <span>即梦</span><span>Runway</span><span>可灵</span><span>Sora</span><span>D-ID</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>设计软件</h3>
+        <div class="skill-tags">
+          <span>Figma</span><span>Photoshop</span><span>Illustrator</span>
+          <span>After Effects</span><span>Blender</span><span>C4D</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>设计能力</h3>
+        <div class="skill-tags">
+          <span>UI/UX</span><span>视觉设计</span><span>角色设计</span>
+          <span>场景设计</span><span>动效设计</span><span>设计系统</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 关于 ===== -->
+  <section id="about" class="about-section">
+    <h2>关于</h2>
+    <div class="about-content">
+      <div class="about-item">
+        <span class="about-label">教育</span>
+        <span class="about-value">北方工业大学 · 建筑学硕士 · 2020-2023</span>
+      </div>
+      <div class="about-item">
+        <span class="about-label">工作</span>
+        <span class="about-value">AIGC 设计师 · 中电金信（驻场支付宝）· 2024.05 - 至今</span>
+      </div>
+      <div class="about-item">
+        <span class="about-label">前职</span>
+        <span class="about-value">助理建筑设计师 · 浙江金华建筑设计院 · 2023.07-2024.01</span>
+      </div>
+      <div class="about-item">
+        <span class="about-label">所在</span>
+        <span class="about-value">杭州</span>
+      </div>
+    </div>
+    <div class="about-bio">
+      <p>建筑学硕士出身，具备扎实的设计功底与空间审美能力。2024 年转型 AIGC 设计后，快速掌握 Midjourney、Stable Diffusion、ComfyUI、即梦等主流 AI 工具链，并在支付宝出行数字人、书阁一体小游戏等项目中完成设计落地。</p>
+      <p>善于将 AI 能力与业务需求结合，高效产出高质量视觉内容。</p>
+    </div>
+  </section>
+
+  <!-- ===== 联系 ===== -->
+  <section id="contact" class="contact-section">
+    <h2>联系我</h2>
+    <p class="contact-name">叮当</p>
+    <p class="contact-role">AIGC 体验设计师</p>
+    <div class="contact-links">
+      <a href="tel:18182065980">18182065980</a>
+      <a href="mailto:18182065980@163.com">18182065980@163.com</a>
+      <span>杭州</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 叮当 · AIGC 体验设计师</p>
+  </footer>
+
+  <!-- ===== 项目详情弹窗 ===== -->
+  <div id="project-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProject()">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
